@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وصفات أودين</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #5d4037;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #6d4c41;
+            border-bottom: 2px solid #ff9a9e;
+            padding-bottom: 8px;
+            margin: 25px 0 15px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .recipe-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #ff9a9e;
+        }
+        
+        .recipe-content {
+            padding: 20px;
+        }
+        
+        .recipe-title {
+            font-size: 1.4rem;
+            color: #5d4037;
+            margin-bottom: 10px;
+        }
+        
+        .recipe-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .view-recipe {
+            display: block;
+            text-align: center;
+            background-color: #ff9a9e;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .view-recipe:hover {
+            background-color: #f47a7e;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .recipe-card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>وصفات أودين</h1>
+        <p>اكتشف أفضل الوصفات من مطبخ أودين</p>
+    </header>
+    
+    <div class="intro">
+        <p>مرحبًا بك في موقع وصفات أودين! هنا ستجد مجموعة مختارة من أشهى الوصفات التي يمكنك تحضيرها في منزلك. اختر الوصفة التي تعجبك واتبع الخطوات البسيطة لتحضيرها.</p>
+    </div>
+    
+    <div class="container">
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="معكرونة" class="recipe-image">
+            <div class="recipe-content">
+                <h3 class="recipe-title">معكرونة بولونيز</h3>
+                <p class="recipe-description">معكرونة إيطالية كلاسيكية مع صلصة اللحم الغنية والطماطم. طبق رئيسي مثالي للعائلة.</p>
+                <a href="recipes/pasta.html" class="view-recipe">عرض الوصفة</a>
+            </div>
+        </div>
+        
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="سلطة" class="recipe-image">
+            <div class="recipe-content">
+                <h3 class="recipe-title">سلطة سيزر</h3>
+                <p class="recipe-description">سلطة طازجة مع خس الرومانو، كروتونات، جبن البارميزان وصلصة سيزر الكلاسيكية.</p>
+                <a href="recipes/salad.html" class="view-recipe">عرض الوصفة</a>
+            </div>
+        </div>
+        
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="كيك شوكولاتة" class="recipe-image">
+            <div class="recipe-content">
+                <h3 class="recipe-title">كيك الشوكولاتة</h3>
+                <p class="recipe-description">كيكة شوكولاتة غنية ورطبة، مثالية لعشاق الحلويات. يمكن تزيينها بالكريمة أو الفواكه.</p>
+                <a href="recipes/chocolate-cake.html" class="view-recipe">عرض الوصفة</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 مشروع وصفات أودين | تم إنشاؤه كجزء من دورة تطوير الويب</p>
+    </footer>
+</body>
+</html>
