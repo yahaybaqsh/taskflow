@@ -1,0 +1,23 @@
+import { join } from "https://deno.land/std@0.224.0/path/mod.ts";
+
+const TASKS_FILE = join(Deno.cwd(), "tasks.json");
+
+export interface Task {
+  id: number;
+  text: string;
+  completed: boolean;
+  createdAt: string;
+}
+
+export async function loadTasks(): Promise<Task[]> {
+  try {
+    const data = await Deno.readTextFile(TASKS_FILE);
+    return JSON.parse(data);
+  } catch {
+    return [];
+  }
+}
+
+export async function saveTasks(tasks: Task[]): Promise<void> {
+  await Deno.writeTextFile(TASKS_FILE, JSON.stringify(tasks, null, 2));
+}
